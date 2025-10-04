@@ -1,0 +1,80 @@
+/* 로딩 진행 상태 표시 요소 */
+#BaekjoonHub_progress_anchor_element {
+  margin-right: 20px !important;
+}
+
+/* 로딩 애니메이션 */
+.BaekjoonHub_progress {
+  display: inline-block;
+  pointer-events: none;
+  width: 1.7em;
+  height: 1.7em;
+  border: 0.4em solid transparent;
+  border-color: #eee;
+  border-top-color: #3e67ec;
+  border-radius: 50%;
+  animation: loadingspin 1s linear infinite;
+}
+
+/* 로딩 애니메이션 키프레임 */
+@keyframes loadingspin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 업로드 실패 아이콘 - 빨간 X */
+#BaekjoonHub_progress_elem.markuploadfailed {
+  display: inline-block;
+  position: relative;
+  width: 0.9em;
+  height: 0.9em;
+  transform: none; /* 기존 rotate 제거 */
+  border: none;    /* 기존 border 제거 */
+}
+
+/* X를 만드는 두 선 */
+#BaekjoonHub_progress_elem.markuploadfailed::before,
+#BaekjoonHub_progress_elem.markuploadfailed::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;        /* 선 두께 */
+  height: 100%;      /* 선 길이 */
+  background-color: red;
+}
+
+#BaekjoonHub_progress_elem.markuploadfailed::before {
+  transform: translateX(-50%) rotate(45deg);
+}
+
+#BaekjoonHub_progress_elem.markuploadfailed::after {
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+/* 업로드 성공 아이콘 */
+#BaekjoonHub_progress_elem.markuploaded {
+  display: inline-block;
+  transform: rotate(45deg);
+  width: 0.9em;
+  height: 1.7em;
+  border-bottom: 3px solid #78b13f;
+  border-right: 3px solid #78b13f;
+}
+
+/* 백준 플랫폼 특화 스타일 */
+.BaekjoonHub_progress {
+  width: 0.8em !important;
+  height: 0.8em !important;
+}
+
+#BaekjoonHub_progress_elem.markuploadfailed {
+  height: 13px !important;
+  width: 5px !important;
+}
+
+#BaekjoonHub_progress_elem.markuploaded {
+  height: 13px !important;
+  width: 5px !important;
+}

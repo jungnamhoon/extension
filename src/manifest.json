@@ -1,0 +1,35 @@
+{
+  "name": "SkyIsTheLimit Extension",
+  "version": "1.0",
+  "description" : "백준 문제를 풀고 채점 결과를 자동으로 SkyIsTheLimit에 업로드하는 익스텐션",
+  "permissions": [
+    "identity",
+    "storage" 
+  ],
+  "action": {
+    "default_icons": "assets/thumbnail.png",
+    "default_popup": "popup.html"
+  },
+
+  "icons" : {
+    "16" : "assets/thumbnail.png",
+    "48" : "assets/thumbnail.png",
+    "128" : "assets/thumbnail.png"
+  },
+
+  "host_permissions": [
+    "https://www.acmicpc.net/*"
+  ],
+  
+  "manifest_version": 3,
+    "content_scripts": [
+    {
+      "matches": ["https://www.acmicpc.net/status*"],
+      "css": ["./css/common.css"],
+      "js": ["baekjoon.js"],
+      "run_at" : "document_idle"
+    }
+  ],
+
+  "key" : "77u/MD8EPwIBADANCgYJKj9IPz8NCgEBAQUABD8EPzA/BD8CAQACPwEBAD8nP11cPz8/O3JfTz8tPzg/P1s/P08gPx0kNzoaPz8zYhY/P0sNCjQOP1A/Vzw/P1I/PwRbAz9+P0xbPz8/P3I/bz9KPwc/Fz83Xz84L2BgJz8/DBp6WT8RPz8TPz8lPwwBPz8/CHdjPz9XPz8/Pz80P2sXOjp3Px9qPz8/FhgSP0c/Ojc/Pzw/dz8/ez9iPz8/Pz9HP1E/LHg/PwhyPxI/Zj8/Pz89Pz8/Ij9yP0E/Pz8/Pz8/P0QoTj8/GT8sSSE5Pz8/Pzs/ND8/fz9aPz9+Pz8yP0JjPwdlUD8/HD8/P08/P096Pz8NCj9FPz8mQD8/P14/PwIDAQABAj8BAAU/PwJAPz8oPz8/PzUDPz8/ZiJXPig/Pzc/BT8/TD9PcT8/VCk/A0cwfgI/P2w/PwJ9Pz92P0xuHT8fPz93Wj8/Vw8/P09oakM/KEA/QAx1Kz8dPzo/HT8EP2g/P0cVbj8/cz8/LgQ4Djg/ED9cCT8/P0s/QAE+P3A/Pzw/PzI/P2M/P0A/Pz8/cz8FPyc/Bko/WD9bPz8/Pz8/YD9HPwRoPz9Wcz9JYTo/PxBwB0BsGT8/dz9LSl0OPz98WAg/LlBaPx4yPxY/eUphP2M/Pz8/ej8/P1QPP18/Y3k/P38aPwUjP1xzP3R+P1okMD8/Aj8/AD9nPzVfP0s/Pz8/P1tGP1ltP1sIPygOKz8VPxwGbT8/bD97CAMnclBCP2tHP2A/BT9EP3M/Cz4/Pz9kLj5SPxoRP2A0JzByP1o/Pz8/TwY/Pzs/TCU/IEw/P1s/Pz8/SHs/Pyw/PxI/clpmRz9hP1A/YDE/fz8/Aj8/AD9vPxwSPS8/Pz9Jfnw/CzlpP2QrPz8/FF8/P1Y/P0ZHPyYbN2oqPz8/eAs/Pz89P0FoBz9wZz9XRj8PRT8gJD8/P3Q/P3U/P3o/DE0/LGI/Vjs/TWZQP0g/BD8/HgUjPzk0Pz9qND8YIT9vPzoEP38MIT9Jf2xeXQI/PwA/A2wnPz8/SlMfPz0/P1dibEc/M1s/ND8/TT8dUAsSPyNpfgYXKD4ZUCp+PxAHP25UPz8/WWgqPxQoJ1s/Pz8tUXxkCz85CzcDP0E/P0g/Mj9ibD9zXitgP3Q/P2AkPz8/Pwk/Pw0KPz84Jj8/Pz8/Pz8/P2tUPz8/Aj8/FT9iMD8RPxszcz8/Pz86Tz9Hfz8/Pz8/AD8/P19CYj81KD8LYmY/WD8/Pz8/WGQ/Pz8WHy0/Dz80Pz8+PxhCPys0eAsBbz8/CFg/P1I/Fz9WLD8SGD8UPz86Fj8TYD8/P3k/Pz9PZT8/Jj9SMz8FNz8/Pz9GPz8/PwI/PwA/P00/OGI/Jm8/I0s/ST8/Pz8yZD8/c1M3Pz8/KV0GDQo/Aj8/DD8/Pyo/P3wqPwMaPwIjGnA/Pz8DPz8/Pz85Lj8/L1o/Py8/NVEQbT8/dD8hXj93Pw0KPz99Py0DfT9XbD8/cm4fP0E/P0IrQD8/Xyg/Pz8/PT8EOQENCg=="
+}
