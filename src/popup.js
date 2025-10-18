@@ -54,7 +54,7 @@ document.getElementById('authenticate').addEventListener('click', function() {
 
 async function getAccessTokenFromServer() {
   try {
-    const response = await fetch(`${baseUrl}/api/auth/reissue/access-token`, {
+    const response = await fetch(`${baseUrl}/api/auth/access-token`, {
       method: 'GET',
       credentials: 'include'
     });
