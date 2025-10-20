@@ -42,7 +42,7 @@ function parsingResultTableList(document) {
 
   if (resultText === "맞았습니다!!") {
     isCorrect = true;
-  } else if (resultText === "틀렸습니다!!" || resultText === "시간 초과" || resultText === "메모리 초과" || resultText === "출력 초과" || resultText === "런타임 에러") {
+  } else if (resultText === "틀렸습니다" || resultText === "시간 초과" || resultText === "메모리 초과" || resultText === "출력 초과" || resultText === "런타임 에러" || resultText ==="컴파일 에러") {
     isCorrect = false;
   } else {
     console.log("Unrecognized result text:", resultText);
