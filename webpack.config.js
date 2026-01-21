@@ -3,10 +3,9 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: "production",
-  devtool: 'inline-source-map',
+  devtool: false,
   entry: {
     baekjoon: './src/scripts/baekjoon.js',
-    
   },
 
   output: {
@@ -18,6 +17,7 @@ module.exports = {
     new CopyPlugin({
       patterns : [
         { from: "./src/manifest.json", to: "./" },
+        { from: "./src/rules.json", to: "./" },
         { from: "./src/assets", to: "./assets" },
         { from: "./src/css", to: "./css" },
         { from: "./src/popup.html", to: "./" },

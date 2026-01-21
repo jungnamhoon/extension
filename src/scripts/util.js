@@ -26,18 +26,6 @@ export function startUpload() {
   startUploadCountDown();
 }
 
-function startUploadCountDown() {
-
-  uploadState.uploading = true;
-  uploadState.countdown = setTimeout(() => {
-    if (uploadState.uploading === true) {
-      console.log("업로드에 실패했습니다.");
-      markUploadFailedCSS();
-    }
-  }, 20000);
-}
-
-
 export function markUploadedCSS () {
   uploadState.uploading = false;
   const elem = document.getElementById('BaekjoonHub_progress_elem');
@@ -48,4 +36,15 @@ export function markUploadFailedCSS() {
   uploadState.uploading = false;
   const elem = document.getElementById('BaekjoonHub_progress_elem');
   elem.className = 'markuploadfailed';
+}
+
+function startUploadCountDown() {
+
+  uploadState.uploading = true;
+  uploadState.countdown = setTimeout(() => {
+    if (uploadState.uploading === true) {
+      console.log("업로드에 실패했습니다.");
+      markUploadFailedCSS();
+    }
+  }, 20000);
 }
